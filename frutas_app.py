@@ -9,41 +9,47 @@ st.write("Introduce las características de una fruta.")
 peso = st.number_input("Peso (gramos)", value=180)
 diametro = st.number_input("Diámetro (cm)", value=7.0)
 dulzor = st.number_input("Dulzor (0 - 10)", value=8.0)
+dureza = st.number_input("Dureza (0 - 10)", value=10.0)
 
 # Convertimos los datos en un vector
-fruta_usuario = [peso, diametro, dulzor]
+fruta_usuario = [peso, diametro, dulzor, dureza]
 
 st.write("Vector de tu fruta:", fruta_usuario)
 
 # Frutas conocidas
-manzana = [170, 7.0, 7]
-banano = [120, 5.0, 9]
-naranja = [200, 8.0, 6]
-Coco = [250, 10.0, 6]
+manzana = [170, 7.0, 7, 8]
+banano = [120, 5.0, 9, 3]
+naranja = [200, 8.0, 6, 5]
+Coco = [250, 10.0, 6, 10.0]
 # Calculamos las distancias
 
 distancia_manzana = math.sqrt(
     (fruta_usuario[0] - manzana[0])**2 +
     (fruta_usuario[1] - manzana[1])**2 +
-    (fruta_usuario[2] - manzana[2])**2
+    (fruta_usuario[2] - manzana[2])**2 +
+    (fruta_usuario[3] - manzana[3])**2 
 )
 
 distancia_banano = math.sqrt(
     (fruta_usuario[0] - banano[0])**2 +
     (fruta_usuario[1] - banano[1])**2 +
-    (fruta_usuario[2] - banano[2])**2
+    (fruta_usuario[2] - banano[2])**2 +
+    (fruta_usuario[3] - banano[3])**2
 )
 
 distancia_naranja = math.sqrt(
     (fruta_usuario[0] - naranja[0])**2 +
     (fruta_usuario[1] - naranja[1])**2 +
-    (fruta_usuario[2] - naranja[2])**2
+    (fruta_usuario[2] - naranja[2])**2 +
+    (fruta_usuario[3] - naranja[3])**2 
+    
 )
 
 distancia_Coco = math.sqrt(
-    (fruta_usuario[0] - naranja[0])**2 +
-    (fruta_usuario[1] - naranja[1])**2 +
-    (fruta_usuario[2] - naranja[2])**2
+    (fruta_usuario[0] - Coco[0])**2 +
+    (fruta_usuario[1] - Coco[1])**2 +
+    (fruta_usuario[2] - Coco[2])**2 +
+    (fruta_usuario[2] - Coco[3])**2   
 )
 
 # Mostramos las distancias
